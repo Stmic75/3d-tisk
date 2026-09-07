@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D TISK — Galerie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" onclick="showHome();return false"><span>3D</span> TISK</a>
+  <nav><a href="#" onclick="showHome();return false">Galerie</a><a href="#kontakt">Poptávka</a></nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">INDIVIDUÁLNÍ 3D TISK</p>
+    <h1>Vyberte si model.<br><em>O zbytek se postaráme.</em></h1>
+    <p class="lead">Prohlédněte si galerii modelů. Vyberte si, co se vám líbí, a pošlete nám obrázek.</p>
+    <p class="value-point"><strong>Žádná pevná cena.</strong> Každý model může být jinak velký – a právě v tom je výhoda. <strong>Velikost si určíte podle svých potřeb</strong>, takže neplatíte za něco, co nepotřebujete. Provedení i cenu vám připravíme individuálně.</p>
+    <a class="button" href="#galerie">Prohlédnout galerii</a>
+  </div>
+  <div class="hero-art"><div class="hero-card"><span>3D</span><small>PRINT GALLERY</small></div></div>
+</section>
+
+<section id="galerie" class="gallery">
+  <div class="section-head">
+    <p class="eyebrow">GALERIE MODELŮ</p>
+    <h2 id="title">Vyberte kategorii</h2>
+    <p id="subtitle">Všechny modely jsou načítány přímo z našeho GitHub katalogu.</p>
+  </div>
+  <div id="categories" class="category-grid"></div>
+  <div id="back" class="back hidden"><button onclick="showCategories()">← Zpět na kategorie</button></div>
+  <div id="models" class="cards"></div>
+  <div id="status" class="status"></div>
+</section>
+
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+  <button id="closeLightbox" class="lightbox-close" type="button" aria-label="Zavřít">×</button>
+  <div class="lightbox-panel">
+    <div id="lightboxImage" class="lightbox-image" role="img" aria-label="Náhled modelu"></div>
+    <div class="lightbox-info">
+      <p class="eyebrow" id="lightboxCategory"></p>
+      <h2 id="lightboxTitle"></h2>
+      <p>Vybraný model si můžete stáhnout jako obrázek a poslat nám ho k nacenění.</p>
+      <div class="lightbox-actions">
+        <a id="downloadImage" class="button" href="#" download>Stáhnout obrázek</a>
+        <a id="mailRequest" class="button secondary" href="#">Poptat model</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="kontakt" class="contact">
+  <p class="eyebrow">MÁTE VYBRÁNO?</p>
+  <h2>Pošlete nám svůj model.</h2>
+  <p>Cena závisí na velikosti a provedení. Každou zakázku řešíme individuálně.</p>
+  <a class="button" href="mailto:nebudlama007@seznam.cz">nebudlama007@seznam.cz</a>
+</section>
+</main>
+<footer>© 3D TISK · Individuální 3D tisk na zakázku</footer>
+<script src="script.js"></script>
+</body>
+</html>
