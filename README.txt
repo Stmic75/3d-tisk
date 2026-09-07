@@ -14,3 +14,6 @@ V7 TEXT: Upraven úvodní prodejní argument – cena není pevná, zákazník s
 
 
 V8 – stabilní galerie s kategoriemi a automatickou slideshow fotografií podle počtu obrázků ve složce modelu.
+
+
+V9: Přidána kategorie NAŠE REALIZACE jako první. Ostatní funkce V8 zůstávají beze změny.

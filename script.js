@@ -1,8 +1,5 @@
 const OWNER="Stmic75", REPO="3d-tisk", BRANCH="main";
-const categories=[
-  ["DEKORACE","Dekorace"],["AUTO_MOTO","Auto Moto"],["FIGURKY","Figurky"],
-  ["KVĚTINÁČE","Květináče"],["SVĚTLA","Světla"],["ZBRANĚ","Zbraně"]
-];
+const categories=["NAŠE REALIZACE","DEKORACE","Dekorace","AUTO_MOTO","Auto Moto","FIGURKY","Figurky","KVĚTINÁČE","Květináče","SVĚTLA","Světla","ZBRANĚ","Zbraně"];
 const $=id=>document.getElementById(id);
 
 function showCategories(){
