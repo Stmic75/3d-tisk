@@ -35,7 +35,7 @@ async function loadModels(folder,label){
     const paths=(data.tree||[]).filter(x=>x.type==="blob" && x.path.startsWith(prefix));
     const modelNames=[...new Set(paths
       .map(x=>x.path.slice(prefix.length))
-      .filter(rest=>rest.includes("/"))
+      .filter(rest=>folder==="NAŠE REALIZACE" ? !rest.includes("/") : rest.includes("/"))
       .map(rest=>rest.split("/")[0])
       .filter(name=>name && name!==".gitkeep"))]
       .sort((a,b)=>a.localeCompare(b,"cs"));
@@ -43,7 +43,7 @@ async function loadModels(folder,label){
     const cards=modelNames.map(name=>{
       const modelPrefix=prefix+name+"/";
       const imageFile=paths
-        .filter(x=>x.path.startsWith(modelPrefix) && /\.(webp|png|jpe?g|gif)$/i.test(x.path))
+        .filter(x=>folder==="NAŠE REALIZACE" ? x.path===prefix+name : x.path.startsWith(modelPrefix) && /\.(webp|png|jpe?g|gif)$/i.test(x.path))
         .sort((a,b)=>{
           const score=p=>/promo|cover|main|preview|thumb|náhled|nahled/i.test(p)?0:1;
           return score(a.path)-score(b.path);
